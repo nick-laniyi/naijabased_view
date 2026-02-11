@@ -1,0 +1,101 @@
+# ========== USER UPLOADS & DATA ==========
+/uploads/
+/cv_uploads/
+/data/
+/BACKUP/
+/uploadsz/
+/private/
+/uploads/temp/
+
+# ========== VENDOR DEPENDENCIES ==========
+/vendor/
+/includes/vendor/
+/brevo/vendor/
+/node_modules/
+
+# ========== SYSTEM & IDE FILES ==========
+.DS_Store
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.naijabased.code-workspace
+*.code-workspace
+
+# ========== LOGS & TEMP FILES ==========
+*.log
+error_log
+/tmp/
+/temp/
+.cache/
+
+# ========== OS SPECIFIC ==========
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ========== BLOCK ACTUAL CODE ==========
+# Block all PHP files in root
+/*.php
+# Block all PHP files in these directories
+/actions/
+/ajax/
+/api/
+/business/
+/community/
+/includes/
+/payments/
+/phpmailer/
+/professionals/
+/scripts/
+/webhooks/
+
+# ========== BUT ALLOW DOCUMENTATION ==========
+# Allow root documentation files
+!README.md
+!PROJECT_OVERVIEW.md
+!INSTALL.md
+!LICENSE
+!CHANGELOG.md
+
+# Allow documentation folders
+!documentation/
+documentation/*
+!documentation/*.md
+
+# Allow assets with diagrams
+!assets/
+assets/*
+!assets/diagrams/
+assets/diagrams/*
+!assets/diagrams/*.md
+
+# Allow database schema (structure only, no data)
+!database/
+database/*
+!database/schema.sql
+!database/README.md
+
+# Allow screenshots folder
+!screenshots/
+screenshots/*
+!screenshots/*.png
+!screenshots/*.jpg
+!screenshots/*.jpeg
+!screenshots/*.gif
+!screenshots/*.webp
+
+# ========== EXPLICITLY BLOCK EVERYTHING ELSE ==========
+# This ensures no stray code files get committed
+/*
+!/documentation/
+!/assets/
+!/screenshots/
+!/database/
+!README.md
+!PROJECT_OVERVIEW.md
+!INSTALL.md
+!LICENSE
+!CHANGELOG.md
+!.gitignore
