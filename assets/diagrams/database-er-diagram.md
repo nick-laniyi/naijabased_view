@@ -1,6 +1,6 @@
 NaijaBased - Database ER Diagram
 
-🧑‍🤝‍🧑 Core User Tables
+ Core User Tables
 erDiagram
     USERS ||--o{ POSTS : creates
     USERS ||--o{ COMMENTS : writes
@@ -77,7 +77,7 @@ erDiagram
         datetime created_at
     }
 
-🏢 Business & Marketplace Tables
+ Business & Marketplace Tables
 erDiagram
     USERS ||--o{ BUSINESS_LISTINGS : owns
     BUSINESS_LISTINGS ||--o{ MARKETPLACE_ITEMS : sells
@@ -173,7 +173,7 @@ erDiagram
     }
 
 
-📅 Events & Ticketing Tables
+ Events & Ticketing Tables
 erDiagram
     USERS ||--o{ EVENTS : creates
     EVENTS ||--o{ EVENT_BOOKINGS : has
@@ -256,7 +256,7 @@ erDiagram
         datetime checked_in_at
     }
 
-💼 Jobs Tables
+ Jobs Tables
 erDiagram
     USERS ||--o{ JOBS : posts
     BUSINESS_LISTINGS ||--o{ JOBS : offers
@@ -315,7 +315,7 @@ erDiagram
         datetime reviewed_at
     }
 
-👥 Communities Tables
+ Communities Tables
 erDiagram
     USERS ||--o{ COMMUNITIES : creates
     COMMUNITIES ||--o{ COMMUNITY_MEMBERS : has
@@ -372,7 +372,7 @@ erDiagram
 
 
 
-💰 Transactions & Payments Tables
+ Transactions & Payments Tables
 erDiagram
     USERS ||--o{ ORDERS : places
     USERS ||--o{ ORDERS : receives
@@ -446,7 +446,7 @@ erDiagram
     }
 
 
-💬 Messaging Tables
+ Messaging Tables
 erDiagram
     USERS ||--o{ CONVERSATIONS : participates
     CONVERSATIONS ||--o{ MESSAGES : contains
@@ -485,7 +485,7 @@ erDiagram
         datetime created_at
     }
 
-🔔 Notifications Tables
+ Notifications Tables
 erDiagram
     USERS ||--o{ NOTIFICATIONS : receives
     USERS ||--o{ NOTIFICATION_PREFERENCES : configures
@@ -522,7 +522,7 @@ erDiagram
     }
 
 
-🏷️ Hashtags & Taxonomy Tables
+ Hashtags & Taxonomy Tables
 erDiagram
     HASHTAGS ||--o{ POST_HASHTAGS : used_in
     POSTS ||--o{ POST_HASHTAGS : has
@@ -566,7 +566,7 @@ erDiagram
     }
 
 
-🇳🇬 Nigerian Location Tables
+ Nigerian Location Tables
 erDiagram
     NIGERIA_STATES ||--o{ NIGERIA_LGAS : contains
     NIGERIA_STATES ||--o{ NIGERIA_CITIES : contains
@@ -610,7 +610,7 @@ erDiagram
         int verification_score
     }
 
-📊 Table Relationships Summary
+ Table Relationships Summary
 graph TD
     subgraph "👤 Core"
         USERS[👤 users]
@@ -702,7 +702,7 @@ graph TD
     style TRANSACTIONS fill:#e0f7fa,stroke:#006064,stroke-width:2px
 
 
-📈 Database Statistics
+ Database Statistics
 
 
 Table	Records	Growth/Month	Size

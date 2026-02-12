@@ -1,66 +1,66 @@
 NaijaBased - System Architecture Diagram
 graph TB
-    subgraph "🌐 Client Layer"
-        A1[💻 Web Browser]
-        A2[📱 Mobile App]
-        A3[📲 USSD Gateway]
+    subgraph " Client Layer"
+        A1[ Web Browser]
+        A2[ Mobile App]
+        A3[ USSD Gateway]
     end
 
     subgraph "⚡ CDN & Edge"
-        B1[🌍 Cloudflare CDN]
-        B2[🖼️ Image Optimization]
-        B3[🛡️ WAF / DDoS Protection]
+        B1[ Cloudflare CDN]
+        B2[ Image Optimization]
+        B3[ WAF / DDoS Protection]
     end
 
-    subgraph "⚖️ Load Balancing"
-        C1[🔀 Nginx Load Balancer]
-        C2[🔄 Auto-scaling Group]
+    subgraph " Load Balancing"
+        C1[ Nginx Load Balancer]
+        C2[ Auto-scaling Group]
     end
 
-    subgraph "🖥️ Application Layer"
-        D1[📦 Web Server 1]
-        D2[📦 Web Server 2]
-        D3[📦 Web Server 3]
-        D4[📦 Web Server N]
-        D5[📁 Static Assets]
+    subgraph " Application Layer"
+        D1[ Web Server 1]
+        D2[ Web Server 2]
+        D3[ Web Server 3]
+        D4[ Web Server N]
+        D5[ Static Assets]
     end
 
     subgraph "⚡ Caching Layer"
-        E1[🔥 Redis Cluster]
-        E2[💾 File Cache]
-        E3[⚙️ OpCache]
-        E4[🎯 Session Storage]
+        E1[ Redis Cluster]
+        E2[ File Cache]
+        E3[ OpCache]
+        E4[ Session Storage]
     end
 
-    subgraph "📨 Queue Layer"
-        F1[🐇 RabbitMQ]
-        F2[📧 Email Queue]
-        F3[📱 SMS Queue]
-        F4[🖼️ Image Processing Queue]
-        F5[🔔 Notification Queue]
+    subgraph " Queue Layer"
+        F1[ RabbitMQ]
+        F2[ Email Queue]
+        F3[ SMS Queue]
+        F4[ Image Processing Queue]
+        F5[ Notification Queue]
     end
 
-    subgraph "💾 Database Layer"
-        G1[🗄️ MySQL Master]
-        G2[📚 MySQL Slave 1]
-        G3[📚 MySQL Slave 2]
-        G4[📚 MySQL Slave N]
-        G5[💽 Automated Backups]
+    subgraph " Database Layer"
+        G1[ MySQL Master]
+        G2[ MySQL Slave 1]
+        G3[ MySQL Slave 2]
+        G4[ MySQL Slave N]
+        G5[ Automated Backups]
     end
 
-    subgraph "🔌 Third Party Services"
-        H1[💳 Paystack]
-        H2[📨 Termii / Mocean]
-        H3[✉️ Brevo]
-        H4[🗺️ Google Maps]
-        H5[📦 Logistics APIs]
+    subgraph " Third Party Services"
+        H1[ Paystack]
+        H2[ Termii / Mocean]
+        H3[ Brevo]
+        H4[ Google Maps]
+        H5[ Logistics APIs]
     end
 
-    subgraph "📊 Monitoring"
-        I1[📈 New Relic]
-        I2[🚨 Sentry]
-        I3[📉 Custom Dashboards]
-        I4[🔔 Alert Manager]
+    subgraph " Monitoring"
+        I1[ New Relic]
+        I2[ Sentry]
+        I3[ Custom Dashboards]
+        I4[ Alert Manager]
     end
 
     %% Connections
@@ -144,19 +144,19 @@ graph TB
     class H1,H2,H3,H4,H5 third;
     class I1,I2,I3,I4 monitor;
 
-📊 Data Flow Diagram
+ Data Flow Diagram
 sequenceDiagram
-    participant User as 👤 User
-    participant Browser as 🌐 Browser
-    participant CDN as ⚡ Cloudflare
-    participant LB as ⚖️ Load Balancer
-    participant App as 🖥️ Web Server
-    participant Cache as 🔥 Redis
-    participant DB as 🗄️ MySQL
-    participant Queue as 📨 RabbitMQ
-    participant Paystack as 💳 Paystack
-    participant Email as ✉️ Brevo
-    participant SMS as 📱 Termii
+    participant User as  User
+    participant Browser as  Browser
+    participant CDN as  Cloudflare
+    participant LB as  Load Balancer
+    participant App as  Web Server
+    participant Cache as  Redis
+    participant DB as  MySQL
+    participant Queue as  RabbitMQ
+    participant Paystack as  Paystack
+    participant Email as  Brevo
+    participant SMS as  Termii
 
     User->>Browser: 1. Click "Buy Now"
     Browser->>CDN: 2. Request page
